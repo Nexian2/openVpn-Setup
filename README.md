@@ -1,8 +1,4 @@
-# OpenVPN Server Deployment – LKS Cyber Security
-
-This repository contains a complete OpenVPN setup for Secure Connectivity
-category (Bobot 30%).
-
+# OpenVPN Server Deployment 
 ## Objective
 
 - Deploy OpenVPN Server
