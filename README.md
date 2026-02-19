@@ -1,43 +1,28 @@
-# OpenVPN install
+# OpenVPN Server Deployment – LKS Cyber Security
 
-This repository contains the implementation of Secure Connectivity
-based on the competition guideline:
-
-- OpenVPN Server Deployment
-- SSH Hardening
-- SSH Tunneling Enforcement
-- Port Whitelisting (Deny All Policy)
+This repository contains a complete OpenVPN setup for Secure Connectivity
+category (Bobot 30%).
 
 ## Objective
 
-Ensure that:
-1. Client can access server only via VPN.
-2. Web server can only be accessed through SSH tunneling.
-3. All non-essential ports are blocked.
+- Deploy OpenVPN Server
+- Generate client certificates
+- Allow secure client-to-server communication
+- Client must be able to ping server via VPN network
 
----
+## VPN Network
 
-## Architecture Overview
+Server VPN IP : 10.8.0.1  
+Client VPN IP : 10.8.0.2+
 
-Client → VPN Tunnel → Server  
-Web Access → SSH Tunnel Only  
+Protocol       : UDP  
+Port           : 1194  
 
----
+## Verification
 
-## Services
+After connection:
 
-| Service   | Port  | Access Type |
-|-----------|-------|------------|
-| OpenVPN   | 1194  | UDP        |
-| SSH       | 2222  | TCP        |
-| HTTP      | 80    | Localhost only |
+ping 10.8.0.1
 
----
-
-## Security Controls Implemented
-
-- Default DROP firewall policy
-- SSH root login disabled
-- Password policy enforced
-- Web server bound to localhost
+Must return reply.
 - VPN certificate authentication
