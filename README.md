@@ -1,4 +1,4 @@
-# Secure Infrastructure Setup – LKS Cyber Security
+# OpenVPN install
 
 This repository contains the implementation of Secure Connectivity
 based on the competition guideline:
